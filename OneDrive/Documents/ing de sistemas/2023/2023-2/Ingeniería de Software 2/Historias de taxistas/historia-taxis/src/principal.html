@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historias de Usuario</title>
+    <style>
+        /* Estilos CSS para dar formato a las historias */
+        .story {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+            width: 200px;
+            text-align: center;
+        }
+        .story img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Historias de Usuario</h1>
+    <div id="historias-container"></div>
+
+    <script>
+        // Definimos un arreglo de historias de usuario
+        const historias = [
+            {
+                titulo: "Historia 1",
+                descripcion: "Trabajé un tiempo de taxista. Una bonita noche, una chica guapa se subió al auto. El viaje fue un éxito y luego hice otros 8-10 pedidos. Por la mañana llamaron los controladores, me dijeron que la chica había perdido su billetera en alguna parte, y me pidieron que por favor lo verificara. La billetera había quedado abierta en el asiento trasero de mi auto. Le llevé la billetera, pero no escuché ni siquiera un “gracias”. Pero yo, por mi parte, quisiera agradecerles a quienes viajaron ese día y no la tocaron. © Oídoporahí / VK",
+                imagen: "imagen1.jpg"
+            },
+            {
+                titulo: "Historia 2",
+                descripcion: "Perdí mi teléfono hace 8 meses. Hoy me subí a un taxi y el chofer dijo: “Espera un minuto, tengo algo para ti”. Y me entregó mi teléfono perdido. Resultó que la empresa no quería lidiar con eso, por lo que el taxista decidió guardar el smartphone encontrado y esperó la oportunidad en que volviera a llevarme a algún lado. El dispositivo era viejito, por lo que se descargó rápidamente y no pude comunicarme con él para encontrarlo antes. Me sorprendió que se acordara de mí y que hubiera guardado el teléfono durante tanto tiempo. Lo recompensé por tanta amabilidad. © shaysade_ / Twitter",
+                imagen: "imagen2.jpg"
+            },
+            {
+                titulo: "Historia 3",
+                descripcion: "Como usuario, quiero tener la opción de guardar ubicaciones frecuentes (hogar, trabajo, etc.) para agilizar futuras solicitudes de viaje.",
+                imagen: "imagen3.jpg"
+            },
+            {
+                titulo: "Historia 4",
+                descripcion: "Como conductor, quiero tener acceso a direcciones y rutas sugeridas en la aplicación para llegar al destino de manera eficiente.",
+                imagen: "taxistas.jpg"
+            },
+            {
+                titulo: "Historia 5",
+                descripcion: "El otro día viajaba en un taxi, mi estado de ánimo era nulo, tenía muchos problemas, estrés, también estaba mensajeándome con una amiga, nos peleamos y rompí a llorar. El taxista lo notó. Al principio se quedó incómodamente en su asiento, luego ofreció poner alguna música estimulante. No dije nada. Dejó el teléfono en el soporte y encendió la versión de karaoke de la canción de Shrek “Somebody Once Told Me”. Al principio, él mismo cantaba con una voz bastante agradable, mirando por el espejo primero al camino, luego a mí. Desde el coro, me conecté con él y terminamos la canción juntos. Resultó de alguna manera tan bueno que me sentí un poco mejor. Le puse 5 estrellas. © Habitación № 6 / VK",
+                imagen: "imagen5.jpg"
+            }
+        ];
+
+        // Obtenemos el contenedor donde mostraremos las historias
+        const historiasContainer = document.getElementById("historias-container");
+
+        // Recorremos el arreglo de historias y creamos elementos HTML para cada una
+        historias.forEach((historia, index) => {
+            const storyDiv = document.createElement("div");
+            storyDiv.classList.add("story");
+
+            const imagen = document.createElement("img");
+            imagen.src = historia.imagen;
+
+            const titulo = document.createElement("h2");
+            titulo.textContent = historia.titulo;
+
+            const descripcion = document.createElement("p");
+            descripcion.textContent = historia.descripcion;
+
+            storyDiv.appendChild(imagen);
+            storyDiv.appendChild(titulo);
+            storyDiv.appendChild(descripcion);
+
+            historiasContainer.appendChild(storyDiv);
+        });
+    </script>
+</body>
+</html>
