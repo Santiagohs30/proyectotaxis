@@ -1,6 +1,8 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+-----------NOTA......................
+
+Para que la app se ejecute con el comando npm start, se debe antes ejecutar el comando nmp i, esto debido a que no se carga la carpeta node_modules al repositorio remoto.
 
 ## Available Scripts
 
