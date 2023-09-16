@@ -2,7 +2,7 @@
 
 -----------NOTA......................
 
-Para que la app se ejecute con el comando npm start, se debe antes ejecutar el comando nmp i, esto debido a que no se carga la carpeta node_modules al repositorio remoto.
+Para que la app se ejecute con el comando npm start, se debe antes ejecutar el comando npm i, esto debido a que no se carga la carpeta node_modules al repositorio remoto.
 
 ## Available Scripts
 
