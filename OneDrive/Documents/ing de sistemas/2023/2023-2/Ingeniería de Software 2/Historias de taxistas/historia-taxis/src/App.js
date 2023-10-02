@@ -1,84 +1,65 @@
-/* import logo from './logo.svg'; */
-
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 
-
-
+import React, {  useState } from 'react'
 
 
 /* import { RegistroForm} from './Componentes/RegistroForm'; */
 
 
 import './App.css';
+import { TaxiForm } from './Componentes/TaxiForm';
 
-function App() {
+import { TaxiFormProvider, useTaxiFormContext } from './Componentes/TaxiFormContext';
+
+
+
+/* function App() {
+  return ( */
+
+   /*   <React.Fragment> */
+
+    {/* <div>
+      <TaxiForm/> */}
+    /* </div> */
+    {/* <Inicio/> */}
+    /* </React.Fragment> */
+ /*  )  ; */
+/* } */
+
+// Componente principal
+const App = () => {
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
   return (
+    <TaxiFormProvider>
+      <div className="App">
+        <button onClick={openModal}>Abrir Formulario</button>
 
-     <React.Fragment>
-
-    
-    <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              {/* <Link to="/">Inicio</Link> */}
-            </li>
-            <li>
-              {/* <Link to="/registro">Registro</Link> */}
-            </li>
-            <li>
-              {/* <Link to="/iniciar-sesion">Iniciar sesión</Link> */}
-            </li>
-          </ul>
-        </nav>
-
-        <Switch>
-          <Route path="/registro">
-            <Registro />
-          </Route>
-          <Route path="/iniciar-sesion">
-            <IniciarSesion />
-          </Route>
-          <Route path="/">
-            <Inicio />
-          </Route>
-        </Switch>
+        {isModalOpen && (
+          <div className="modal">
+            <div className="modal-content">
+              <span className="close" onClick={closeModal}>
+                &times;
+              </span>
+              <TaxiForm />
+            </div>
+          </div>
+        )}
       </div>
-    
-    </Router>
-    </React.Fragment>
-  )  ;
-}
-
-function Inicio() {
-  return (
-    <div>
-      <h2>Inicio</h2>
-      <p>Bienvenido a la página de inicio.</p>
-    </div>
+    </TaxiFormProvider>
   );
-}
+};
 
-function Registro() {
-  return (
-    <div>
-      <h2>Registro</h2>
-      {/* Aquí iría el formulario de registro */}
-    </div>
-  );
-}
 
-function IniciarSesion() {
-  return (
-    <div>
-      <h2>Iniciar sesión</h2>
-      {/* Aquí iría el formulario de inicio de sesión */}
-    </div>
-  );
-}
+
 
 
 export default App;
