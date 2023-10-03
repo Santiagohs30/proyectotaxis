@@ -8,7 +8,7 @@ const App = () => {
   const [estimatedFare, setEstimatedFare] = useState(0);
 
   const handleDistanceChange = (e) => {
-    setDistance(e.target.value);
+    setDistance(e.target.vagitlue);
   };
 
   const calculateFare = () => {
