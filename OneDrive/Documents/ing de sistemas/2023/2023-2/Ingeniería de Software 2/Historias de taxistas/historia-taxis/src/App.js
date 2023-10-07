@@ -59,7 +59,7 @@ const App = () => {
         {/* El botón de cerrar ventanas solo es visible si alguna ventana está abierta */}
         {isFormVisible || isLoginVisible ? (
           
-          <button onClick={closeWindows}>Cerrar Ventanas</button>
+          <button onClick={closeWindows}>Anterior</button>
         ) : null}
       </div>
     </TaxiFormProvider>
