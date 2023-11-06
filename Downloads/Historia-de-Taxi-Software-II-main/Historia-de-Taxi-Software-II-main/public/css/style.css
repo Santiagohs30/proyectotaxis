@@ -1,0 +1,233 @@
+body{
+    background-color: rgb(232, 232, 164);
+    font-family: roboto;
+    margin: auto;
+    text-align: center;
+}
+
+.login-form, .contenedor{
+    width: 300px;
+    margin: 0 auto;
+}
+
+.login-form h1{
+    text-align: center;
+    color: #33339a;
+    font-size: 28px;
+    padding: 70px 0 10px 0;
+}
+
+.login-form input[type="password"], 
+.login-form input[type="email"]{
+    width: 100%;
+    padding: 15px;
+    border: 1px solid rgb(206, 206, 205);
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.btn-login{
+    width: 100%;
+    padding: 15px;
+    background-color: #9a72c0;
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: large;
+    color: #ffffff;
+}
+
+.btn-login:hover, .btn-login:active{
+    color: #fff;
+    background-color: #7f6894;
+    border-color: #7f6894;
+}
+
+.btn-login:focus{
+    box-shadow: 0 0 0 3px rgba(121, 82, 179, 0.25)
+}
+
+.btn-registro{
+    width: 100%;
+    padding: 15px;
+    background-color: #57e138;
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: large;
+    color: #ffffff;
+    margin-top: 20px;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    text-decoration: none;
+}
+
+.btn-registro:hover, .btn-registro:active{
+    color: #fff;
+    background-color: #41a72a;
+    border-color: #41a72a;
+}
+
+.btn-registro:focus{
+    box-shadow: 0 0 0 3px rgba(121, 82, 179, 0.25)
+}
+
+.a-login:link, .a-login:visited{
+    background-color: rgb(231, 231, 237);
+    color: black;
+    border: 2px solid #41a72a;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.a-login-hover, .a-login-actived{
+    background-color: #41a72a;
+    color: white;
+}
+
+.a-logout-link, .a-logout-visited{
+    background-color: white;
+    color: black;
+    border: 2px solid #ab4e4e ;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block; 
+}
+
+.a-logout-hover, .a-logout-active{
+    background-color: #ab4e4e;
+    color: white;
+}
+
+
+.btn-cancel{
+    width: 50%;
+    padding: 15px;
+    background-color: #dd181e;
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: medium;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+}
+
+.btn-cancel:hover, .btn-cancel:active{
+    color: #fff;
+    background-color: #7d0b24;
+    border-color: #7d0b24;
+}
+
+.btn-cancel:focus{
+    box-shadow: 0 0 0 3px #927fa5;
+}
+
+.btn-save{
+    width: 50%;
+    padding: 15px;
+    background-color: #3881e1;
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: medium;
+    color: #ffffff;
+    margin-top: 20px;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    text-decoration: none;
+}
+
+.btn-save:hover, .btn-save:active{
+    color: #fff;
+    background-color: #236bc8;
+    border-color: #236bc8;
+}
+
+.btn-registro:focus{
+    box-shadow: 0 0 0 3px #236bc8;
+}
+
+.registro-form{
+    width: 350px;
+    margin: 0 auto;
+    padding: 0px 20 px 60 px 20px;
+    margin-top: 35px;
+    font-family: roboto;
+    text-align: center;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.registro-form h1{
+    text-align: center;
+    color: #33339a;
+    font-size: 22px;
+    padding: 20px 0 10px 0;
+}
+
+.registro-form input[type="password"],
+.registro-form input[type="email"],
+.registro-form input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+}
+
+
+
+.Calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  .input-container {
+    margin-bottom: 20px;
+  }
+  
+  input {
+    padding: 12px;
+    font-size: 18px;
+    width: 200px;
+    border: 2px solid #4caf50;
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  .result {
+    font-size: 24px;
+    margin-top: 20px;
+    color: #4caf50;
+  }
